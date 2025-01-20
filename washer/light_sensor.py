@@ -1,5 +1,6 @@
 # from https://www.uugear.com/portfolio/using-light-sensor-module-with-raspberry-pi/
 import RPi.GPIO as GPIO
+import time
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4,GPIO.IN)
@@ -11,4 +12,4 @@ while count < 120:
   else:
     print("FALSE")
   count += 1
-  sleep(1)
+  time.sleep(1)
