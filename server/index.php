@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Welcome to My Simple PHP Page</h1>
-    <p>This is a paragraph of text in my simple PHP page.</p>
+    <p><?php echo date('Y-m-d H:i:s'); ?></p>
 
     <h2>Washer</h2>
     <p>Status: <span id="washerStatus"><?php echo "Not Running"; ?></span></p>
