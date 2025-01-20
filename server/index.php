@@ -11,8 +11,8 @@
     <h2>Washer</h2>
     <p>Status: <span id="washerStatus"><?php echo "Coming Soon"; ?></span></span></p>
 
-    <h2>Dryer</h2>
-    <p>Status: <span id="dryer_status">
+    <h2>Dryer Status:</h2>
+    <span id="dryer_status">
     <pre>
     <?php
     // Path to the file
@@ -30,7 +30,7 @@
     }
     ?>
     </pre>
-    </span></p>
+    </span>
 
 </body>
 </html>
