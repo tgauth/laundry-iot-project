@@ -41,7 +41,7 @@ while True:
   # Get the current date and time
   now = datetime.datetime.now()
   # Format the timestamp
-  timestamp = now.strftime("%Y-%m-%d %h:%M")
+  timestamp = now.strftime("%Y-%m-%d %H:%M")
 
   message = f"{timestamp} {status} {duration} minutes"
   write_to_file(message)
