@@ -28,10 +28,10 @@ while count < 120:
   # Check if the sensor is active (vibration detected)
   state = vibration_sensor.is_active
   if state:
-      printf("running")
+      print("running")
       status = "running"
   else:
-      printf("not running")
+      print("not running")
       status = "not running"
       
   if state == prev_state:
