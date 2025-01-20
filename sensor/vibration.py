@@ -15,16 +15,37 @@ def write_to_file(data, file_path='/var/www/html/dryer_data.txt'):
         with open(file_path, 'w') as file:
             file.write(data)
     except Exception as e:
+        print(f"An error occurred: {e}")
+
+prev_state = False;
+duration = 0; # will be in minutes
+status = "not running"
 
 count = 0;
 # Continuous loop to read from the sensor
 #while True:
 while count < 120:
-    # Check if the sensor is active (no vibration detected)
-    dryer_status = "Running" if vibration_sensor.is_active else "Not Running"
-    print(f"status: {dryer_status}")
-    # Call the function to write data to the file
-    write_to_file(dryer_status)
-    count += 1    
-    # Wait for 1 second before reading the sensor again
-    time.sleep(1)
+  # Check if the sensor is active (no vibration detected)
+  state = vibration_sensor.is_active
+  if state:
+      status = "not running"
+  else:
+      status = "running"
+      
+  if state == prev_state:
+      duration += 1
+  else:
+      duration = 1
+      prev_state = state
+  
+  # Get the current date and time
+  now = datetime.datetime.now()
+  # Format the timestamp
+  timestamp = now.strftime("%Y-%m-%d %H:%M")
+
+  message = f"{timestamp} {status} {duration}"
+  write_to_file(message)
+    
+  count += 1
+  #time.sleep(60)
+  time.sleep(1)
