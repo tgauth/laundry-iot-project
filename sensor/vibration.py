@@ -28,10 +28,10 @@ while True:
   # Check if the sensor is active (vibration detected)
   state = vibration_sensor.is_active
   if state:
-      print("running")
+      #print("running")
       status = "running"
   else:
-      print("not running")
+      #print("not running")
       status = "not running"
       
   if state == prev_state:
