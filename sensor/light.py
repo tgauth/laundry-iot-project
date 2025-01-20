@@ -42,7 +42,6 @@ while count < 120:
   timestamp = now.strftime("%Y-%m-%d %H:%M")
 
   message = f"{timestamp} {status} {duration}"
-  print("{message}")
   write_to_file(message)
     
   count += 1
