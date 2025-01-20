@@ -8,8 +8,8 @@ GPIO.setup(4,GPIO.IN)
 count = 0
 while count < 120:
   if GPIO.input(4):
-    print("TRUE")
+    print("TRUE") # light off
   else:
-    print("FALSE")
+    print("FALSE") # light on
   count += 1
   time.sleep(1)
