@@ -13,6 +13,7 @@ def write_to_file(data, file_path='/var/www/html/washer_data.txt'):
         with open(file_path, 'w') as file:
             file.write(data)
     except Exception as e:
+        print(f"An error occurred: {e}")
 
 prev_state = False;
 duration = 0; # will be in minutes
