@@ -10,9 +10,7 @@ def write_to_file(data, file_path='/var/www/html/washer_data.txt'):
     try:
         with open(file_path, 'w') as file:
             file.write(data)
-            print(f"Data written to {file_path} successfully.")
     except Exception as e:
-        print(f"An error occurred: {e}")
 
 count = 0;
 # Continuous loop to read from the sensor
