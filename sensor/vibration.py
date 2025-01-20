@@ -22,9 +22,9 @@ prev_state = False;
 duration = 0; # will be in minutes
 status = "not running"
 
-#count = 0;
+count = 0;
 # Continuous loop to read from the sensor
-while True:
+while count < 120:
   # Check if the sensor is active (vibration detected)
   state = vibration_sensor.is_active
   if state:
@@ -45,4 +45,5 @@ while True:
 
   message = f"{timestamp} {status} {duration} minutes"
   write_to_file(message)
-  time.sleep(60)
+  count += 1
+  time.sleep(1)
