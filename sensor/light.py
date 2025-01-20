@@ -19,10 +19,9 @@ prev_state = False;
 duration = 0; # will be in minutes
 status = "not running"
 
-count = 0;
+# count = 0;
 # Continuous loop to read from the sensor
-#while True:
-while count < 120:
+while True:
   # light is off when input is high and light is on when input is low
   state = GPIO.input(4)
   if state:
@@ -39,11 +38,9 @@ while count < 120:
   # Get the current date and time
   now = datetime.datetime.now()
   # Format the timestamp
-  timestamp = now.strftime("%Y-%m-%d %h:%M")
+  timestamp = now.strftime("%Y-%m-%d %H:%M")
 
   message = f"{timestamp} {status} {duration} minutes"
   write_to_file(message)
     
-  count += 1
-  #time.sleep(60)
-  time.sleep(1)
+  time.sleep(60)
