@@ -30,4 +30,4 @@ however, the duration the dryer has been off can provide some insight.
 - Compare state to previous state
 - Write to file: timestamp status duration
 - Website displays: timestampe status duration
-- Website also displays predicted states described above
+- Website also displays predicted states described above (tbd if necessary)
