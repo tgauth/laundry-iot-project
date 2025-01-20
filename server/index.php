@@ -6,8 +6,6 @@
     <title>Washer and Dryer Status Page</title>
 </head>
 <body>
-    <p><?php echo date('Y-m-d H:i:s'); ?></p>
-
     <h2>Washer Status:</h2>
     <p><span id="washerStatus">
     <pre>
@@ -52,4 +50,3 @@
 
 </body>
 </html>
-
