@@ -19,7 +19,7 @@ count = 0;
 #while True:
 while count < 120:
   # light is off when input is high and light is on when input is low
-  status = "Not Running" if GPIO.input(4) else "Running":
+  status = "Not Running" if GPIO.input(4) else "Running"
   write_to_file(status)
   count += 1
   time.sleep(1)
