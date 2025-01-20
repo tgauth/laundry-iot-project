@@ -26,12 +26,12 @@ count = 0;
 # Continuous loop to read from the sensor
 #while True:
 while count < 120:
-  # Check if the sensor is active (no vibration detected)
+  # Check if the sensor is active (vibration detected)
   state = vibration_sensor.is_active
   if state:
-      status = "not running"
-  else:
       status = "running"
+  else:
+      status = "not running"
       
   if state == prev_state:
       duration += 1
