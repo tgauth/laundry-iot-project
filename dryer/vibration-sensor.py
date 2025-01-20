@@ -10,7 +10,7 @@ import time
 vibration_sensor = InputDevice(17)
 
 # URL of the PHP script
-php_url = "http://rpi-laundry/index.php"
+php_url = "http://rpi-laundry/request_handler.php"
 
 count = 0;
 # Continuous loop to read from the sensor
