@@ -29,5 +29,5 @@ however, the duration the dryer has been off can provide some insight.
 - Both light and vibration sensors will check state every minute
 - Compare state to previous state
 - Write to file: timestamp status duration
-- Website displays: timestampe status duration
-- Website also displays predicted states described above (tbd if necessary)
+- Website displays: timestamp status duration
+- [TODO] Website also displays predicted states described above if necessary
