@@ -39,9 +39,9 @@ while count < 120:
   # Get the current date and time
   now = datetime.datetime.now()
   # Format the timestamp
-  timestamp = now.strftime("%Y-%m-%d %H:%M")
+  timestamp = now.strftime("%Y-%m-%d %h:%M")
 
-  message = f"{timestamp} {status} {duration}"
+  message = f"{timestamp} {status} {duration} minutes"
   write_to_file(message)
     
   count += 1
