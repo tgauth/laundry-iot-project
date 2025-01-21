@@ -28,6 +28,7 @@
     </span></p>
 
     <h2>Dryer Status:</h2>
+    <p>*not quite working - isn't sensitive enough to detect the full cycle *</p>
     <p><span id="dryer_status">
     <pre>
     <?php
