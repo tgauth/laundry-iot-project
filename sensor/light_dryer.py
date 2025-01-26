@@ -25,10 +25,10 @@ while True:
   # light is off when input is high and light is on when input is low
   state = GPIO.input(17)
   if state:
-      print("not running")
+      #print("not running")
       status = "not running"
   else:
-      print("running")
+      #print("running")
       status = "running"
       
   if state == prev_state:
