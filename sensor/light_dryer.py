@@ -19,9 +19,9 @@ prev_state = False;
 duration = 0; # will be in minutes
 status = "not running"
 
-# count = 0;
+count = 0;
 # Continuous loop to read from the sensor
-while True:
+while count < 120:
   # light is off when input is high and light is on when input is low
   state = GPIO.input(17)
   if state:
@@ -43,4 +43,5 @@ while True:
   message = f"{timestamp} {status} {duration} minutes"
   write_to_file(message)
     
-  time.sleep(60)
+  time.sleep(1)
+  count += 1
